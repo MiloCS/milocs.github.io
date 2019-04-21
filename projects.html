@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<script type="text/javascript" src="my_site.js"></script>
+		<script type="text/javascript" src="pass.js"></script>
 		<link rel="stylesheet" type="text/css" href="personal_style.css">
 		<link rel="icon" href="m-icon.png">
 		<link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet'>
@@ -9,7 +10,7 @@
 	<body>
 	<div id = "container">
 		<div id="bod_head">
-			<div id="name">Milo Cason-Snow</div>
+			<div id="name">Milo Cason-Snow:Projects</div>
 			<div class="navbar">
   				<a href="index.html">Home</a>
   				<a href="projects.html">Projects</a>
@@ -25,8 +26,16 @@
   			</div> 
 		</div>
 		</div>
-		<div id="bod_body">
-			
+		<div id="bod_body" align="left">
+			<h1>
+				This area is currently password protected
+			</h1>
+			<form onsubmit="myhash()">
+				<input id="username" type="text" placeholder="username" /> <br>
+				<input id="password" type="password" placeholder="password" /> <br>
+				<input type="submit" value="Login">
+			</form>
+			<div id="hash"></div>
 		</div>
 		<div id="bot_credit">
 			<div id="inner_bot_credit">

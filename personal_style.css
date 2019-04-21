@@ -10,9 +10,18 @@ div#bot_credit {
 	width: 100%;
 }
 
+#username #password {
+    float:left;
+    padding: 10
+}
+
 div {
     text-align: center;
     color: black;
+}
+
+div#main-wrapper {
+    text-align: left;
 }
 
 #inner_bot_credit {
@@ -27,7 +36,7 @@ div#name {
 	padding: 15px;
 	text-align: left;
 	color: black;
-	font-family: "Cousine";
+	font-family: 'Segoe UI',SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 40;
 }
 
@@ -51,6 +60,10 @@ img#profile {
 	border:2px solid black;
 }
 
+#mock {
+    text-align: left;
+}
+
 #info_col {
 	float: right;
 	background-color: lightgrey;
@@ -58,6 +71,7 @@ img#profile {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	max-width: 200px;
     overflow: hidden;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 #info_col_wrapper {
