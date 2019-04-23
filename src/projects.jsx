@@ -7,13 +7,30 @@ class Projects extends React.Component {
     	this.state = {
       		repos: []
     	};
-    	this.loadLastCommit = this.loadLastCommit.bind(this)
-    	this.loadGithubData = this.loadGithubData.bind(this)
+    	this.loadLastCommit = this.loadLastCommit.bind(this);
+    	this.loadGithubData = this.loadGithubData.bind(this);
+    	this.sortByLastCommit = this.sortByLastCommit.bind(this);
+    	this.loadGithubData();
   	}
 
+  	// componentWillMount() {
+   //  	this.loadGithubData();
+  	// }
+
   	componentDidMount() {
-    	this.loadGithubData();
-    	this.sortByLastCommit();
+  		this.sortByLastCommit();
+  	}
+
+  	sortByLastCommit() {
+  		console.log(this.state.repos)
+      let tempArray = this.state.repos;
+      console.log(tempArray)
+      tempArray.sort(function(a, b) {
+	      let dateA = a.last_commit;
+	      let dateB = b.last_commit;
+	      return dateA - dateB;
+	  });
+      this.setState({repos: tempArray});
   	}
 
   	loadLastCommit(name) {
@@ -24,7 +41,8 @@ class Projects extends React.Component {
 	        	let temp_repos = this.state.repos
 	        	temp_repos.forEach(repo => {
 	        		if (repo.name == name) {
-	        			repo.last_commit = mydate.toString()
+	        			repo.last_commit = mydate
+	        			repo.last_commit_string = (mydate.getMonth() + 1) + '/' + mydate.getDate() + '/' +  mydate.getFullYear() + ' ' + mydate.toLocaleTimeString(); 
 	        		}
 	        	});
 	        	this.setState({
@@ -49,9 +67,10 @@ class Projects extends React.Component {
 	          this.setState({
 	            repos: data
 	          });
-	          this.state.repos.forEach(repo =>
-	          	this.loadLastCommit(repo.name)
+	          data.forEach(repo =>
+	          	this.loadLastCommit(repo.name, data)
 	          );
+	          console.log(this.state.repos)
 	        });
 	      } else {
 	        response.json().then(error => {
@@ -63,19 +82,17 @@ class Projects extends React.Component {
 	    });
   	}
 
-  	sortByLastCommit() {
-    let tempArray = this.state.repos;
-    tempArray.sort(function(a, b) {
-      a = new Date(a.last_commit);
-      b = new Date(b.last_commit);
-      return a<b ? -1 : a>b ? 1 : 0;
-    });
-    this.setState({repos: tempArray});
-  }
-
   	render() {
+
   		const repo_display = this.state.repos.map(data =>
-  			<li className='boxed' key={data.id}>{data.full_name}   Last Commit:{data.last_commit}</li>
+  			<div key={data.id}>
+  			<a href={data.html_url}>
+  			<div className='boxed'>
+  			{data.full_name}<div className='boxedDescription'>{data.description}</div><br/><div className='boxedDate'>Last Commit: {data.last_commit_string}</div>
+  			</div>
+  			</a>
+  			<br/>
+  			</div>
   		);
 
   		return (<div>
