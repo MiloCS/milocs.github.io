@@ -10,6 +10,10 @@ div#bot_credit {
 	width: 100%;
 }
 
+.boxed {
+    border:1px solid black;
+}
+
 #username #password {
     float:left;
     padding: 10
