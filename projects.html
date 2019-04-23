@@ -1,7 +1,11 @@
 <html>
 	<head>
-		<script type="text/javascript" src="my_site.js"></script>
-		<script type="text/javascript" src="pass.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.13.0/polyfill.js"> </script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react.js">
+    	</script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-dom.js">
+    	</script>
+
 		<link rel="stylesheet" type="text/css" href="personal_style.css">
 		<link rel="icon" href="artifacts/m-icon.png">
 		<link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet'>
@@ -30,12 +34,8 @@
 			<h1>
 				My Personal Projects
 			</h1>
-			<form onsubmit="myhash()">
-				<input id="username" type="text" placeholder="username" /> <br>
-				<input id="password" type="password" placeholder="password" /> <br>
-				<input type="submit" value="Login">
-			</form>
-			<div id="hash"></div>
+			<div id="github-content">
+			</div>
 		</div>
 		<div id="bot_credit">
 			<div id="inner_bot_credit">
@@ -44,5 +44,6 @@
 			<div>&#169 2018 Milo Cason-Snow</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="static/projects.js"></script>
 	</body>
 </html>
