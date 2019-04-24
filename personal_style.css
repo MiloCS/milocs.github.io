@@ -11,9 +11,8 @@ div#bot_credit {
 }
 
 .boxed {
-    border:1px solid black;
     text-align: left;
-    padding: 20;
+    padding: 15;
 }
 
 .boxedOuter a {
@@ -58,7 +57,7 @@ div#main-wrapper {
 }
 
 div#name {
-	background-color: lightblue;
+	background: linear-gradient(#0074D9, 10%, #3D9970);
 	padding: 15px;
 	text-align: left;
 	color: black;
@@ -109,13 +108,13 @@ img#profile {
 	min-height: 500;
 }
 
-.navbar {
+.mynavbar {
     overflow: hidden;
     background-color: #333;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-.navbar a {
+.mynavbar a {
     float: left;
     font-size: 16px;
     color: white;
@@ -124,12 +123,12 @@ img#profile {
     text-decoration: none;
 }
 
-.dropdown {
+.mydropdown {
     float: left;
     overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.mydropdown .mydropbtn {
     font-size: 16px;    
     border: none;
     outline: none;
@@ -140,11 +139,11 @@ img#profile {
     margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.mynavbar a:hover, .mydropdown:hover .mydropbtn {
     background-color: grey;
 }
 
-.dropdown-content {
+.mydropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -153,7 +152,7 @@ img#profile {
     z-index: 1;
 }
 
-.dropdown-content a {
+.mydropdown-content a {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -162,11 +161,11 @@ img#profile {
     text-align: left;
 }
 
-.dropdown-content a:hover {
+.mydropdown-content a:hover {
     background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+.mydropdown:hover .mydropdown-content {
     display: block;
 }
 
@@ -179,6 +178,13 @@ body {
 	margin: 0;
 	padding: 0;
 	min-height: 100%;
+}
+
+h1 {
+    text-align: left;
+    padding: 15px;
+    color: black;
+    font-size: 24;
 }
 
 #bod_head{

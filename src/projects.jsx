@@ -33,6 +33,11 @@ class Projects extends React.Component {
       this.setState({repos: tempArray});
   	}
 
+  	fetchImageURL(name) {
+  		let api_key = 'AIzaSyCqXbcfOm1y_EjAT-frCCIolDm1wJodRng'
+  		
+  	}
+
   	loadLastCommit(name) {
   		fetch(`https://api.github.com/repos/MiloCS/${name}/commits`).then(response => {
 	      if(response.ok){
@@ -85,17 +90,17 @@ class Projects extends React.Component {
   	render() {
 
   		const repo_display = this.state.repos.map(data =>
-  			<div key={data.id}>
+  			<div className='list-group-item list-group-item-light' key={data.id}>
   			<a href={data.html_url}>
   			<div className='boxed'>
   			{data.full_name}<div className='boxedDescription'>{data.description}</div><br/><div className='boxedDate'>Last Commit: {data.last_commit_string}</div>
   			</div>
   			</a>
-  			<br/>
+  			<hr/>
   			</div>
   		);
 
-  		return (<div>
+  		return (<div className='list-group'>
   			{repo_display}
   		</div>);
   	}
