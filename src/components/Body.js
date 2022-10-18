@@ -1,4 +1,5 @@
 import profile from './images/profile.jpeg'
+import Projects from './Projects';
 
 const aboutText = `
 Hi, my name is Milo Cason-Snow. I'm currently a software engineer at Qualtrics,
@@ -9,11 +10,20 @@ I'm mainly interested in machine learning, particularly NLP.
 I'm originally from Cambridge, Massachusetts, but I'm now living in Washington, D.C. and working in Northern Virginia.
  `
 
+const aboutText2 = `
+During my graduate studies I worked in the MOSAIC lab at UMass, working on a project generating insights
+from time-series healthcare data using machine learning methods. In my spare time, I like playing chess and working on hobby coding projects,
+some of which are linked below.
+ `
+
  const aboutPanel = (
     <div className='panel'>
         <div>
             <h3>About</h3>
             {aboutText}
+            <br/>
+            <br/>
+            {aboutText2}
         </div>
     </div>
 
@@ -35,7 +45,7 @@ const recentProjects = (
 
 const work = (
     <div className='info'>
-        <svg fill-rule="evenodd" clip-rule="evenodd"><path d="M24 24h-22v-24h14v8h8v16zm-16-5h-3v4h3v-4zm5 0h-3v4h3v-4zm8 0h-3v4h3v-4zm-15-5h-2v2h2v-2zm8 0h-2v2h2v-2zm-4 0h-2v2h2v-2zm9 0h-2v2h2v-2zm3 0h-2v2h2v-2zm-16-4h-2v2h2v-2zm8 0h-2v2h2v-2zm-4 0h-2v2h2v-2zm9 0h-2v2h2v-2zm3 0h-2v2h2v-2zm-16-4h-2v2h2v-2zm8 0h-2v2h2v-2zm-4 0h-2v2h2v-2zm-4-4h-2v2h2v-2zm8 0h-2v2h2v-2zm-4 0h-2v2h2v-2z"/></svg>
+        <svg><path d="M24 24h-22v-24h14v8h8v16zm-16-5h-3v4h3v-4zm5 0h-3v4h3v-4zm8 0h-3v4h3v-4zm-15-5h-2v2h2v-2zm8 0h-2v2h2v-2zm-4 0h-2v2h2v-2zm9 0h-2v2h2v-2zm3 0h-2v2h2v-2zm-16-4h-2v2h2v-2zm8 0h-2v2h2v-2zm-4 0h-2v2h2v-2zm9 0h-2v2h2v-2zm3 0h-2v2h2v-2zm-16-4h-2v2h2v-2zm8 0h-2v2h2v-2zm-4 0h-2v2h2v-2zm-4-4h-2v2h2v-2zm8 0h-2v2h2v-2zm-4 0h-2v2h2v-2z"/></svg>
         &nbsp;&nbsp;Software Engineer @ Qualtrics    
     </div>
 )
@@ -56,7 +66,7 @@ const school = (
 
 const location = (
     <div className='info'>
-        <svg fill-rule="evenodd" clip-rule="evenodd"><path d="M12 10c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2m0-5c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3m-7 2.602c0-3.517 3.271-6.602 7-6.602s7 3.085 7 6.602c0 3.455-2.563 7.543-7 14.527-4.489-7.073-7-11.072-7-14.527m7-7.602c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602"/></svg>
+        <svg><path d="M12 10c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2m0-5c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3m-7 2.602c0-3.517 3.271-6.602 7-6.602s7 3.085 7 6.602c0 3.455-2.563 7.543-7 14.527-4.489-7.073-7-11.072-7-14.527m7-7.602c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602"/></svg>
         &nbsp;&nbsp;Washington, D.C.
     </div>
 )
@@ -75,10 +85,12 @@ const picPanel = (
 
 function Body() {
     return (
-        <div className="body">
-            {picPanel}
-            {about}
-            {/* {recentProjects} */}
+        <div className='body-wrapper'>
+            <div className="body">
+                {picPanel}
+                {about}
+                <Projects></Projects>
+            </div>
         </div>
     );
 }
