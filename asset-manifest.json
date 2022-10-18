@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.25d9772f.css",
-    "main.js": "/static/js/main.0ab89cc5.js",
+    "main.css": "/static/css/main.87a09ed3.css",
+    "main.js": "/static/js/main.127244ce.js",
     "static/media/umass.jpeg": "/static/media/umass.3a03b067d6828ee610c4.jpeg",
     "static/media/dc.jpg": "/static/media/dc.b438c87afa350f2ce2c7.jpg",
     "static/media/profile.jpeg": "/static/media/profile.dfdfaa3cea7ec0dc083e.jpeg",
     "static/media/cambridge.jpg": "/static/media/cambridge.3b20cb0f91dc111370c3.jpg",
     "index.html": "/index.html",
-    "main.25d9772f.css.map": "/static/css/main.25d9772f.css.map",
-    "main.0ab89cc5.js.map": "/static/js/main.0ab89cc5.js.map"
+    "main.87a09ed3.css.map": "/static/css/main.87a09ed3.css.map",
+    "main.127244ce.js.map": "/static/js/main.127244ce.js.map"
   },
   "entrypoints": [
-    "static/css/main.25d9772f.css",
-    "static/js/main.0ab89cc5.js"
+    "static/css/main.87a09ed3.css",
+    "static/js/main.127244ce.js"
   ]
 }
